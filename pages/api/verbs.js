@@ -1,3 +1,5 @@
+import nextConnect from 'next-connect';
+
 function handler(req, res) {
   const {method} = req
   
@@ -8,6 +10,19 @@ function handler(req, res) {
   if (method === 'POST') {
     res.status(200).json({message: 'POST!'})
   }
+
+  if (method === 'PATCH') {
+    res.status(200).json({message: 'PATCH!'})
+  }
+  
+  if (method === 'PUT') {
+    res.status(200).json({message: 'PUT!'})
+  }
+  
+  if (method === 'DELETE') {
+    res.status(200).json({message: 'DELETE!'})
+  };
+
   res.status(404).json({message: 'not found'})
 }
 
